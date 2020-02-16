@@ -3,16 +3,11 @@ import axios from 'axios';
 import { Link } from 'react-router-dom'
 import Spinner from '../layout/Spinner'
 import './Lyrics.css'
-import ReactPlayer from 'react-player'
 import Search from '../tracks/Search'
 import VideoList from '../../youtube-components/video-list'
 import VideoDetail from '../../youtube-components/video-detail'
 import YTSearch from 'youtube-api-search'
 import Moment from 'react-moment'
-
-
-const YOUTUBE_APIKEY = 'AIzaSyAqiWZ92cBD2Wdkl7AbtEC4IXRCzoWvyfk'
-
 
 class Lyrics extends Component {
     constructor(props) {
@@ -25,7 +20,7 @@ class Lyrics extends Component {
             videos: [],
             selectedVideo: null
         }
-        this.videoSearch('live your life    ')
+        this.videoSearch('')
     }
 
     async componentDidMount() {
@@ -58,7 +53,7 @@ class Lyrics extends Component {
 
     //func for searching youtube video
     videoSearch(searchTerm) {
-        YTSearch({ key: YOUTUBE_APIKEY, term: searchTerm },
+        YTSearch({ key: 'ENTER YOUR YOUTUBE_API_KEY', term: searchTerm },
             (data => {
                 this.setState({ videos: data, selectedVideo: data[0] })
             }))
@@ -102,7 +97,6 @@ class Lyrics extends Component {
                     <ul className="list-group mt-3">
                         <li className="list-group-item">
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                {/* <ReactPlayer url='https://www.youtube.com/watch?v=weRHyjj34ZE' controls={true} /> */}
                                 {this.videoSearch(this.state.track.track_name)}
                                 <VideoDetail video={this.state.selectedVideo} />
 
