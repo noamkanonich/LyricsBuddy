@@ -51,14 +51,12 @@ class Lyrics extends Component {
 
     }
 
-    //func for searching youtube video
     videoSearch(searchTerm) {
         YTSearch({ key: 'ENTER YOUR YOUTUBE_API_KEY', term: searchTerm },
             (data => {
                 this.setState({ videos: data, selectedVideo: data[0] })
             }))
     }
-
 
     render() {
         const { track, lyrics, albumCover } = this.state
@@ -69,7 +67,6 @@ class Lyrics extends Component {
         }
         else {
             return (
-
                 <React.Fragment>
                     <Link to="/" className="btn btn-dark btn-md mb-4">Go Back</Link>
                     <div className="card">
