@@ -1,0 +1,13 @@
+.navbar {
+    text-align: center;
+    background-color: 'black';
+    background: 'black';
+    border: 10px 10px 0px 0px;
+}
+
+.title {
+    font-size: 34px;
+    text-align: center;
+
+    color: rgb(255, 255, 255);
+}
