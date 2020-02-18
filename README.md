@@ -8,6 +8,18 @@ It also fetches the songs album cover from other external API to give users a im
 # Screenshot
 ![Lyrics Buddy Screenshot](https://user-images.githubusercontent.com/55742997/74413839-dc5e4980-4e48-11ea-8001-6f6e5922fa7a.jpg)
 
+# How To Start LyricsBuddy
+
+1. Open the command line on any folder and create a new React app by typing 'create-react-app lyrics-buddy' 
+
+2. copy and replace the folders - 'src' and 'public' from my git to the new folder - 'lyrics-buddy'
+
+3. Open the command line on the 'lyrics-buddy' folder and type 'npm install'
+
+4. type 'npm start'
+
+5. You good to go
+
 ## Available Scripts
 
 In the project directory, you can run:
